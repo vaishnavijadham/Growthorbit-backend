@@ -1,7 +1,7 @@
 'use strict';
 
 const SkillVerification =
-require('../models/SkillVerification.model');
+require('../models/skillVerification.model');
 
 const Resume =
 require('../models/Resume.model');
