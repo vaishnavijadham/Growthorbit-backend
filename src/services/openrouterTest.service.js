@@ -20,7 +20,7 @@ body:JSON.stringify({
 model:
 "openai/gpt-4o-mini",
 
-max_tokens:1500,
+max_tokens:800,
 
 temperature:0.3,
 
@@ -33,7 +33,7 @@ content:
 `
 Return ONLY JSON.
 
-Generate EXACTLY 25 MCQs.
+Generate EXACTLY 10 MCQs.
 
 Schema:
 
@@ -59,7 +59,7 @@ Rules:
 role:"user",
 
 content:
-`Generate 25 MCQs for ${skill}`
+`Generate 10 MCQs for ${skill}`
 }
 
 ]
