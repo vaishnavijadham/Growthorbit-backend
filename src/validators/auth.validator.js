@@ -18,7 +18,7 @@ const signupValidator = [
   body('password')
     .notEmpty().withMessage('Password is required')
     .isLength({ min: 8 }).withMessage('Password must be at least 8 characters')
-    .matches(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]/)
+    .matches(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]+$/)
     .withMessage('Password must contain at least one uppercase letter, one lowercase letter, one number, and one special character'),
 
   body('confirmPassword')
@@ -49,7 +49,7 @@ const changePasswordValidator = [
   body('newPassword')
     .notEmpty().withMessage('New password is required')
     .isLength({ min: 8 }).withMessage('New password must be at least 8 characters')
-    .matches(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]/)
+    .matches(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]+$/)
     .withMessage('Password must contain uppercase, lowercase, number, and special character')
     .custom((value, { req }) => {
       if (value === req.body.currentPassword) {

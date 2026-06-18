@@ -20,7 +20,7 @@ body:JSON.stringify({
 model:
 "openai/gpt-4o-mini",
 
-max_tokens:2500,
+max_tokens:1500,
 
 temperature:0.3,
 
